@@ -1,0 +1,231 @@
+/*General config*/
+:root{
+    --back_color: #000030;
+    --item_color: #000050;
+    --light_color: #4000b0;
+    --regular_color: #331790;
+    --dark_color: #303560;
+    --dark_text_color: #ffffff;
+    --regular_text_color: #d0d0d0;
+    --light_text_color: #707070;
+}
+
+body{
+    margin:0;
+    background-color: var(--back_color);
+}
+
+.page{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar, .footer{
+    height: 10%;
+    padding: 15px;
+    background-color: var(--dark_color);
+}
+
+.navbar>ul, .footer>ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.navbar>ul>li, .footer>ul>li{
+    padding:5px;
+}
+
+.footer>ul>li>h3{
+    font-family: "Gill Sans", sans serif;
+    line-height: 0px;
+    font-size: 18px;
+    font-weight: normal;
+    margin:0;
+    padding: 14px 8px;
+    text-align: center;
+    color: var(--regular_text_color); 
+}
+.footer>ul>li>p{
+    font-family: "Gill Sans", sans serif;
+    line-height: 0px;
+    font-size: 12px;
+    margin:0;
+    padding: 14px 8px;
+    text-align: center;
+    color: var(--light_text_color); 
+}
+
+.navbar>ul>li>a{
+    font-family: "Gill Sans", sans serif;
+    font-size: 18px;
+    margin:0;
+    padding: 14px 8px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--regular_text_color); 
+}
+
+.navbar>ul>li:hover{
+    background-color: var(--regular_color);
+    border-radius: 5px;
+}
+
+/*home.html*/
+.content-home{
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.about>h1, .history>h1{
+    font-family: "Gill Sans", sans serif;
+    font-size: 25px;
+    text-align: center;
+    color: var(--dark_text_color); 
+}
+#book, #potion{
+    border-radius: 8px;
+    width: 300px;
+    padding: 5px;
+}
+
+#history-content, #about-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+}
+
+#about-content>p, #history-content>p{
+    font-family: "Gill Sans", sans serif;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 10px;
+    width: 100%;
+    padding: 15px;
+    color: var(--regular_text_color); 
+}
+
+#warning{
+    font-family: "Gill Sans", sans serif;
+    font-size: 10px;
+    text-align: center;
+    color: var(--light_text_color); 
+}
+
+/*loja.html*/
+.content-shop{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens, .itens-admin{
+    display: flex;
+    align-self: center;
+    flex: 65%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin: 20px;
+    align-items: center;
+}
+
+.item, .add-new-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+    align-items: stretch;
+    padding: 0px;
+    background-color: var(--item_color);
+}
+
+.add-new-item>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.item>button{
+    background-color: var(--light_color);
+    color: var(--regular_text_color); 
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    align-self: center;
+    font-family: "Gill Sans", sans serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.item>p, .add-new-item>form>label{
+    font-family: "Gill Sans", sans serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: var(--regular_text_color); 
+
+}
+
+.item>img{
+    margin: 5px;
+    align-self: center;
+    object-fit: contain;
+}
+
+.add-new-item>h1{
+    font-family: "Gill Sans", sans serif;
+    font-size: 25px;
+    text-align: center;
+    color: var(--dark_text_color); 
+}
+
+.add-new-item>form>input, .add-new-item>form>textarea{
+    width: 70%;
+    align-self: center;
+    color: var(--regular_text_color);
+    text-align: center;
+    font-size: 15px;
+    font-family: "Gill Sans", sans serif;
+    background-color: var(--dark_color);
+    outline: none;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.add-new-item>form>input[type=submit]{
+    font-size: 20px;
+    width: 50%;
+    background-color: var(--light_color);
+    margin-top: 30px;
+}
+
+
+
+/* Remove arrows from input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
